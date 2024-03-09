@@ -1,0 +1,9 @@
+**::Height of Balanced Binary Tree Between any Two Node <= 1.
+
+Maximum height in a Binary Search Tree: O(LogN)
+Maximum number of Comparison/Searching in a Binary Search Tree: O(LogN).
+
+Traversals Method:
+-------------------
+  1). Pre-Order
+        Node-->Left-->Right

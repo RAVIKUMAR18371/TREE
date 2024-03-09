@@ -1,0 +1,91 @@
+    1). if we have the unbalanced Binary Tree --> means that the Binary tree
+         has only the right child not the left child at every Node
+         then TIME COMPLEXITY: O(N)---> very bad
+
+    2).  Trees are similar to LinkedList
+          class Node{
+            int value;
+            Node left;
+            Node right;
+            }
+
+    3).  if the 2 nodes have the same PARENT
+          then they are SIBLINGS.
+
+    4). Properties:-
+      a) size--> the total no. of Nodes
+      b) child and Parent
+      c) Siblings --> Two Nodes which have Same Parent.
+      d) Edge --> Line that connects the two nodes.
+      e) Height --> Maximum height from that node(given Node) to the Leaf Node.
+         compare all height than find the Maximum.
+      f) Leaf Node--> Node which does not have the Child.
+      g) Ancestor and Descendant relationship
+      h) Level
+
+
+    *:: Types of Binary Tree:-
+
+      1)Complete Binary Tree:--> in this ALL THE LEVELS ARE FULL EXCEPT THE
+                               LAST LEVEL IN WHICH ELEMENT GET FILLED FROM
+                               LEFT TO RIGHT, for every Node.
+
+      2) Full Binary Tree
+      or Strict Binary Tree:  --> in this Tree, ALL THE NODES HAVE EITHER
+                                   0 OR 2 CHILDREN.
+      we will use this in Compression , HuffMan Coding.
+
+      3) Perfect Binary Tree: --> in this Tree, ALL THE INTERNAL NODES
+                                   HAVE TWO CHILDREN AND ALL THE LEAF
+                                   NODE ARE ON THE SAME LEVEL.
+
+      4) Height Balanced Tree: --> Average height is O(logN).
+
+      5) Skewed Binary Tree: --> it is like LinkedList
+                              Height is O(N) --> very bad
+
+      6) Ordered Binary Tree: --> In this Tree, EVERY NODE HAS SOME
+                                  PROPERTY.
+                                  example: BINARY SEARCH TREE (LEFT --> SMALLER)
+                                           (RIGHT --> GREATER).
+
+      *:: Properties that helps in solving some question:-
+        1) PERFECT BINARY TREES (let HEIGHT = h):
+          Total Nodes = (2^h+1) - 1
+
+          Explained: 2^i---> 2^1, 2^2, 2^3, 2^4, 2^5, 2^6 , .....
+                    where i = level of tree.
+       GP::
+           (2^h+1) - 1 ==  2^1 + 2^2 + 2^3 + 2^4 + 2^5 + 2^6 , .....up to height "h".
+
+        2) Leaf Node in a PERFECT BINARY TREE = (2^h).
+
+        3) Total Internal Node in a PERFECT BINARY TREE = ((2^h+1) - 1) - 2^h.
+
+        4) if there is "N" no. of Leaves
+          then there is at least Log(n+1) minimum levels we will have.
+
+        5) FULL BINARY TREE :
+                    IF "N" is no. the leaf Node.
+                    then (N-1) --> Number of Internal Node.
+
+              Number of Leaf Node : Number of Internal Node(N-1) + 1.
+
+        6) Degree:: Maximum no. of edges any Node have.
+
+        7) Number of Leaf Node = 1 + Number of Internal Node with 2 children
+                                     (Except the Root)
+--------------------------------------------------------------------------------------
+ ***:: IMPLEMENTATION:
+
+   1) LINKED REPRESENTATION
+   2) SEQUENTIAL --> using ARRAY
+       sequential array: Element are putted from Left(-->priority) to Right.
+
+       In a Binary Tree --> Total Nodes(N) = (2^h+1) - 1
+
+       then find the HEIGHT of the Binary Tree:
+                        N = (2^h+1) - 1
+                        log(N) = h.log(2) + log(2^0) - log(2^0)
+           VVI--->      log(N) = h
+
